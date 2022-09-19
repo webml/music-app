@@ -1,7 +1,7 @@
 import './App.css'
 
-import Main from './components/Main/Main'
-import Bar from './components/Bar/Bar'
+import Main from './components/Main/'
+import Bar from './components/Bar'
 
 function App() {
   return (
