@@ -2,6 +2,7 @@ import * as S from './Main.style'
 import Navbar from '../Navbar'
 import Centerblock from '../Centerblock'
 import Sidebar from '../Sidebar'
+import { PLAYLISTS } from '../../constants'
 
 const Main = () => {
   return (
@@ -13,7 +14,7 @@ const Main = () => {
         <Centerblock name="Треки" />
       </S.Centerblock>
       <S.Sidebar>
-        <Sidebar />
+        <Sidebar playlists={PLAYLISTS} />
       </S.Sidebar>
     </S.Main>
   )

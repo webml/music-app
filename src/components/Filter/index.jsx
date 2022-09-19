@@ -2,47 +2,23 @@ import * as S from './Filter.style'
 import { useState } from 'react'
 
 const Filter = () => {
-  const [activeAuthor, setActiveAuthor] = useState(false)
-  const [visibleAuthor, setVisibleAuthor] = useState(false)
-  const handleClickAuthor = () => {
-    setActiveAuthor(!activeAuthor)
-    setVisibleAuthor(!visibleAuthor)
-    setActiveYear(false)
-    setVisibleYear(false)
-    setActiveGenre(false)
-    setVisibleGenre(false)
-  }
+  const [filter, setFilter] = useState(null)
 
-  const [activeYear, setActiveYear] = useState(false)
-  const [visibleYear, setVisibleYear] = useState(false)
-  const handleClickYear = () => {
-    setActiveYear(!activeYear)
-    setVisibleYear(!visibleYear)
-    setActiveAuthor(false)
-    setVisibleAuthor(false)
-    setActiveGenre(false)
-    setVisibleGenre(false)
-  }
-
-  const [activeGenre, setActiveGenre] = useState(false)
-  const [visibleGenre, setVisibleGenre] = useState(false)
-  const handleClickGenre = () => {
-    setActiveGenre(!activeGenre)
-    setVisibleGenre(!visibleGenre)
-    setActiveAuthor(false)
-    setVisibleAuthor(false)
-    setActiveYear(false)
-    setVisibleYear(false)
+  const selectFilter = (f) => {
+    filter === f ? setFilter(null) : setFilter(f)
   }
 
   return (
     <S.Filter>
       <S.FilterTitle>Искать по:</S.FilterTitle>
       <div>
-        <S.FilterButton $active={activeAuthor} onClick={handleClickAuthor}>
+        <S.FilterButton
+          $active={filter === 'author'}
+          onClick={() => selectFilter('author')}
+        >
           исполнителю
         </S.FilterButton>
-        {visibleAuthor && (
+        {filter === 'author' && (
           <S.FilterPopup>
             <S.FilterPopupItem>
               <p>Michael Jackson</p>
@@ -57,10 +33,13 @@ const Filter = () => {
         )}
       </div>
       <div>
-        <S.FilterButton $active={activeYear} onClick={handleClickYear}>
+        <S.FilterButton
+          $active={filter === 'year'}
+          onClick={() => selectFilter('year')}
+        >
           году выпуска
         </S.FilterButton>
-        {visibleYear && (
+        {filter === 'year' && (
           <S.FilterPopup>
             <S.FilterPopupItem>
               <S.PopupYear>
@@ -74,10 +53,13 @@ const Filter = () => {
         )}
       </div>
       <div>
-        <S.FilterButton $active={activeGenre} onClick={handleClickGenre}>
+        <S.FilterButton
+          $active={filter === 'genre'}
+          onClick={() => selectFilter('genre')}
+        >
           жанру
         </S.FilterButton>
-        {visibleGenre && (
+        {filter === 'genre' && (
           <S.FilterPopup>
             <S.FilterPopupItem>
               <p>Michael Jackson</p>

@@ -1,14 +1,10 @@
 import * as S from './Player.style'
 import TrackPlay from '../TrackPlay'
 import TrackPlaySkeleton from '../TrackPlaySkeleton'
-import { useState } from 'react'
+import { loading } from '../../scripts/loading'
 
 const Player = () => {
-  const [visible, setVisible] = useState(true)
-
-  setTimeout(() => {
-    setVisible(false)
-  }, 5000)
+  const isLoading = loading()
 
   return (
     <S.Player>
@@ -39,7 +35,7 @@ const Player = () => {
           </S.PlayerButtonShuffleSvg>
         </S.PlayerButtonShuffle>
       </S.PlayerControls>
-      {visible ? (
+      {isLoading ? (
         <TrackPlaySkeleton />
       ) : (
         <TrackPlay name="Ты та..." author="Баста" />
