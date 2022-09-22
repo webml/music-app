@@ -1,20 +1,16 @@
 import * as S from './Playlist.style'
 import Track from '../Track'
 import TrackSkeleton from '../TrackSkeleton'
-import { useState } from 'react'
+import { loading } from '../../scripts/loading'
 
 const Playlist = () => {
-  const [visible, setVisible] = useState(true)
-
-  setTimeout(() => {
-    setVisible(false)
-  }, 5000)
+  const isLoading = loading()
 
   return (
     <S.Playlist>
       <S.PlaylistItem>
         <div className="playlist__track">
-          {visible ? (
+          {isLoading ? (
             <TrackSkeleton />
           ) : (
             <Track
@@ -32,7 +28,7 @@ const Playlist = () => {
 
       <S.PlaylistItem>
         <div className="playlist__track">
-          {visible ? (
+          {isLoading ? (
             <TrackSkeleton />
           ) : (
             <Track
@@ -50,7 +46,7 @@ const Playlist = () => {
 
       <S.PlaylistItem>
         <div className="playlist__track">
-          {visible ? (
+          {isLoading ? (
             <TrackSkeleton />
           ) : (
             <Track
@@ -68,7 +64,7 @@ const Playlist = () => {
 
       <S.PlaylistItem>
         <div className="playlist__track">
-          {visible ? (
+          {isLoading ? (
             <TrackSkeleton />
           ) : (
             <Track
@@ -87,7 +83,7 @@ const Playlist = () => {
 
       <S.PlaylistItem>
         <div className="playlist__track">
-          {visible ? (
+          {isLoading ? (
             <TrackSkeleton />
           ) : (
             <Track
@@ -106,7 +102,7 @@ const Playlist = () => {
 
       <S.PlaylistItem>
         <div className="playlist__track">
-          {visible ? (
+          {isLoading ? (
             <TrackSkeleton />
           ) : (
             <Track
@@ -125,7 +121,7 @@ const Playlist = () => {
 
       <S.PlaylistItem>
         <div className="playlist__track">
-          {visible ? (
+          {isLoading ? (
             <TrackSkeleton />
           ) : (
             <Track
@@ -144,7 +140,7 @@ const Playlist = () => {
 
       <S.PlaylistItem>
         <div className="playlist__track">
-          {visible ? (
+          {isLoading ? (
             <TrackSkeleton />
           ) : (
             <Track
@@ -163,7 +159,7 @@ const Playlist = () => {
 
       <S.PlaylistItem>
         <div className="playlist__track">
-          {visible ? (
+          {isLoading ? (
             <TrackSkeleton />
           ) : (
             <Track
@@ -182,7 +178,7 @@ const Playlist = () => {
 
       <S.PlaylistItem>
         <div className="playlist__track">
-          {visible ? (
+          {isLoading ? (
             <TrackSkeleton />
           ) : (
             <Track

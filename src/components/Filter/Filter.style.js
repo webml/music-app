@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
 export const Filter = styled.div`
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -26,8 +24,8 @@ export const FilterButton = styled.div`
   border-radius: 60px;
   padding: 6px 20px;
   cursor: pointer;
-  color: ${(props) => (props.$active ? '#ad61ff' : '#ffffff')};
-  border-color: ${(props) => (props.$active ? '#ad61ff' : '#ffffff')};
+  color: ${({ $active }) => ($active ? '#ad61ff' : '#ffffff')};
+  border-color: ${({ $active }) => ($active ? '#ad61ff' : '#ffffff')};
   margin-right: 10px;
   &:hover {
     border-color: #d9b6ff;

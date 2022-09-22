@@ -1,35 +1,23 @@
 import * as S from './Sidebar.style'
 import SidebarPerson from '../SidebarPerson'
 import SidebarItem from '../SidebarItem'
-import { useState } from 'react'
+import { loading } from '../../scripts/loading'
 import SidebarSkeleton from '../SidebarSkeleton'
 
-const Sidebar = () => {
-  const [visible, setVisible] = useState(true)
-
-  setTimeout(() => {
-    setVisible(false)
-  }, 5000)
+const Sidebar = ({ playlists }) => {
+  const isLoading = loading()
 
   return (
     <div className="sidebar">
       <SidebarPerson name="Sergey.Ivanov" />
       <S.SidebarBlock>
         <S.SidebarList>
-          {visible ? (
-            <SidebarSkeleton />
-          ) : (
-            <SidebarItem img="img/playlist01.png" />
-          )}
-          {visible ? (
-            <SidebarSkeleton />
-          ) : (
-            <SidebarItem img="img/playlist02.png" />
-          )}
-          {visible ? (
-            <SidebarSkeleton />
-          ) : (
-            <SidebarItem img="img/playlist03.png" />
+          {playlists.map((playlist) =>
+            isLoading ? (
+              <SidebarSkeleton />
+            ) : (
+              <SidebarItem id={playlist.id} img={playlist.img} />
+            )
           )}
         </S.SidebarList>
       </S.SidebarBlock>
