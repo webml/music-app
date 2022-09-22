@@ -17,7 +17,7 @@ const StyleDiv = styled.div`
   }
 `
 
-export const Reg = () => {
+export const Registration = () => {
   return (
     <StyleDiv>
       <form>

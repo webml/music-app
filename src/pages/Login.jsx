@@ -31,7 +31,7 @@ export const Login = () => {
         <input type="password" name="" id="" />
         <button onClick={handleClick}>Войти</button>
       </form>
-      <NavLink to="/reg">Создать аккаунт →</NavLink>
+      <NavLink to="/registration">Создать аккаунт →</NavLink>
     </StyleDiv>
   )
 }

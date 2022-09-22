@@ -3,7 +3,7 @@ import { Login } from './pages/Login'
 import { MainPage } from './pages/MainPage'
 import { NotFound } from './pages/NotFound'
 import PlaylistPage from './pages/PlaylistPage'
-import { Reg } from './pages/Reg'
+import { Registration } from './pages/Registration'
 import UserTracks from './pages/UserTracks'
 import { ProtectedRoute } from './components/ProtectedRoute'
 
@@ -12,7 +12,7 @@ export const AppRoutes = ({ user }) => {
     <Routes>
       <Route path="*" element={<NotFound />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/reg" element={<Reg />} />
+      <Route path="/registration" element={<Registration />} />
 
       <Route element={<ProtectedRoute isAllowed={Boolean(user)} />}>
         <Route path="/" element={<MainPage />} />

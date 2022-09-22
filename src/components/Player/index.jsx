@@ -12,11 +12,11 @@ const Player = (props) => {
   const handlerTogglePlay = () => {
     props.updateState()
 
-    if (props.innerRef.current.paused) {
-      props.innerRef.current.play()
+    if (props.audioRef.current.paused) {
+      props.audioRef.current.play()
       setToggleImg('img/icon/pause.svg#icon-pause')
     } else {
-      props.innerRef.current.pause()
+      props.audioRef.current.pause()
       setToggleImg('img/icon/play.svg#icon-play')
     }
   }

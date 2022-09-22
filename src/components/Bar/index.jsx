@@ -31,7 +31,7 @@ const Bar = () => {
         <S.BarPlayerBlock>
           <S.BarPlayer>
             <Player
-              innerRef={audioRef}
+              audioRef={audioRef}
               updateState={() => setIsPlaying(!isPlaying)}
             />
           </S.BarPlayer>
