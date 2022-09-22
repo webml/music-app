@@ -3,20 +3,18 @@ import styled from 'styled-components'
 export const BtnIcon = styled.div`
   padding: 5px;
   margin-left: 28.5px;
+  cursor: pointer;
 
   &:hover svg {
     fill: transparent;
     stroke: #acacac;
-    cursor: pointer;
   }
 
   &:active svg {
     fill: transparent;
     stroke: #ffffff;
-    cursor: pointer;
     fill: #696969;
     stroke: #ffffff;
-    cursor: pointer;
   }
 `
 

@@ -16,17 +16,25 @@ const PlayerButton = styled.div`
   padding: 5px;
   display: flex;
   align-items: center;
+
+  & svg {
+    fill: #d9d9d9;
+  }
+
+  &:hover svg {
+    fill: #696969;
+    cursor: pointer;
+  }
 `
 export const PlayerButtonPrev = styled(PlayerButton)`
   margin-right: 23px;
 `
 export const PlayerButtonPlay = styled(PlayerButton)`
-  margin-right: 23px;
+  margin-right: 18px;
 `
 
 export const PlayerButtonNext = styled(PlayerButton)`
   margin-right: 28px;
-  fill: #a53939;
 `
 
 export const PlayerButtonRepeat = styled(PlayerButton)`
@@ -46,14 +54,11 @@ export const PlayerButtonPrevSvg = styled.svg`
 export const PlayerButtonPlaySvg = styled.svg`
   width: 22px;
   height: 20px;
-  fill: #d9d9d9;
 `
 
 export const PlayerButtonNextSvg = styled.svg`
   width: 15px;
   height: 14px;
-  fill: inherit;
-  stroke: #d9d9d9;
 `
 
 export const PlayerButtonRepeatSvg = styled.svg`

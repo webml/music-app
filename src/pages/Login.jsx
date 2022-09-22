@@ -25,10 +25,12 @@ export const Login = () => {
 
   return (
     <StyleDiv>
-      <h2>Вход</h2>
-      <input type="text" placeholder="login" />
-      <input type="password" name="" id="" />
-      <button onClick={handleClick}>Войти</button>
+      <form>
+        <h2>Вход</h2>
+        <input type="text" placeholder="login" />
+        <input type="password" name="" id="" />
+        <button onClick={handleClick}>Войти</button>
+      </form>
       <NavLink to="/reg">Создать аккаунт →</NavLink>
     </StyleDiv>
   )

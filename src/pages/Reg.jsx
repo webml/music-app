@@ -20,11 +20,13 @@ const StyleDiv = styled.div`
 export const Reg = () => {
   return (
     <StyleDiv>
-      <h2>Регистрация</h2>
-      <input type="text" placeholder="login" />
-      <input type="password" name="" id="" placeholder="Придумайте пароль" />
-      <input type="password" name="" id="" placeholder="Повторите пароль" />
-      <button>Создать аккаунт</button>
+      <form>
+        <h2>Регистрация</h2>
+        <input type="text" placeholder="login" />
+        <input type="password" name="" id="" placeholder="Придумайте пароль" />
+        <input type="password" name="" id="" placeholder="Повторите пароль" />
+        <button>Создать аккаунт</button>
+      </form>
       <NavLink to="/login">← Войти</NavLink>
     </StyleDiv>
   )
