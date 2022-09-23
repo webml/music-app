@@ -4,8 +4,10 @@ export const loading = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setIsLoading(false)
+
+      return () => clearTimeout(timer)
     }, 5000)
   })
 

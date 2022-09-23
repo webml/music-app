@@ -8,13 +8,20 @@ export const Bar = styled.div`
   background: rgba(28, 28, 28, 0.5);
 `
 
+export const Audio = styled.audio`
+  display: none;
+`
+
 export const BarContent = styled.div`
   display: flex;
   flex-direction: column;
 `
 
-export const BarPlayerProgress = styled.div`
-  width: 100%;
+export const BarPlayerProgress = styled.div.attrs((props) => ({
+  style: {
+    width: props.$width,
+  },
+}))`
   height: 5px;
   background: #2e2e2e;
 `

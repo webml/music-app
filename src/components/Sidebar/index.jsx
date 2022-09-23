@@ -14,9 +14,13 @@ const Sidebar = ({ playlists }) => {
         <S.SidebarList>
           {playlists.map((playlist) =>
             isLoading ? (
-              <SidebarSkeleton />
+              <SidebarSkeleton key={playlist.id} />
             ) : (
-              <SidebarItem id={playlist.id} img={playlist.img} />
+              <SidebarItem
+                key={playlist.id}
+                id={playlist.id}
+                img={playlist.img}
+              />
             )
           )}
         </S.SidebarList>
