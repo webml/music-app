@@ -13,13 +13,13 @@ export const SidebarPersonalName = styled.p`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #ffffff;
+  color: ${(props) => props.theme.basicTextColor};
   margin-right: 16px;
 `
 
 export const SidebarAvatar = styled.div`
   width: 43px;
   height: 43px;
-  background-color: #313131;
+  background-color: ${(props) => props.theme.elementBackgroundColor};
   border-radius: 50%;
 `

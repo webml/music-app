@@ -5,7 +5,8 @@ export const Bar = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(28, 28, 28, 0.5);
+  background: ${(props) => props.theme.backgroundColor};
+  box-shadow: 0 -2px 20px ${(props) => props.theme.backgroundColor};
 `
 
 export const Audio = styled.audio`
@@ -23,7 +24,7 @@ export const BarPlayerProgress = styled.div.attrs((props) => ({
   },
 }))`
   height: 5px;
-  background: #2e2e2e;
+  background: ${(props) => props.theme.progressBarColor};
 `
 
 export const BarPlayer = styled.div`

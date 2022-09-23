@@ -17,7 +17,7 @@ export const TrackTitleImage = styled.div`
   width: 51px;
   height: 51px;
   padding: 16px;
-  background: #313131;
+  background: ${(props) => props.theme.elementBackgroundColor};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +28,7 @@ export const TrackTitleSvg = styled.svg`
   width: 18px;
   height: 17px;
   fill: transparent;
-  stroke: #4e4e4e;
+  stroke: ${(props) => props.theme.optionalColor};
 `
 
 export const TrackTitleLink = styled.a`
@@ -36,7 +36,11 @@ export const TrackTitleLink = styled.a`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #ffffff;
+  color: ${(props) => props.theme.basicTextColor};
+
+  &:hover {
+    color: ${(props) => props.theme.hoverTextColor};
+  }
 `
 
 export const TrackTitleSpan = styled.span`
@@ -44,7 +48,7 @@ export const TrackTitleSpan = styled.span`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #4e4e4e;
+  color: ${(props) => props.theme.optionalColor};
 `
 
 export const TrackAuthor = styled.div`
@@ -58,8 +62,12 @@ export const TrackAuthorLink = styled.a`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #ffffff;
+  color: ${(props) => props.theme.basicTextColor};
   text-align: left;
+
+  &:hover {
+    color: ${(props) => props.theme.hoverTextColor};
+  }
 `
 
 export const TrackAlbum = styled.div`
@@ -70,7 +78,11 @@ export const TrackAlbumLink = styled.a`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #696969;
+  color: ${(props) => props.theme.optionalColor};
+
+  &:hover {
+    color: ${(props) => props.theme.hoverTextColor};
+  }
 `
 
 export const TrackTimeSvg = styled.svg`
@@ -78,7 +90,7 @@ export const TrackTimeSvg = styled.svg`
   height: 12px;
   margin-right: 17px;
   fill: transparent;
-  stroke: #696969;
+  stroke: ${(props) => props.theme.optionalColor};
 `
 
 export const TrackTimeSpan = styled.span`
@@ -87,5 +99,5 @@ export const TrackTimeSpan = styled.span`
   font-size: 16px;
   line-height: 24px;
   text-align: right;
-  color: #696969;
+  color: ${(props) => props.theme.optionalColor};
 `
