@@ -20,23 +20,25 @@ export const FilterButton = styled.div`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  border: 1px solid #ffffff;
+  border: 1px solid;
   border-radius: 60px;
   padding: 6px 20px;
   cursor: pointer;
-  color: ${({ $active }) => ($active ? '#ad61ff' : '#ffffff')};
-  border-color: ${({ $active }) => ($active ? '#ad61ff' : '#ffffff')};
+  color: ${(props) =>
+    props.$active ? props.theme.activeTextColor : props.theme.basicTextColor};
+  border-color: ${(props) =>
+    props.$active ? props.theme.activeTextColor : props.theme.basicTextColor};
   margin-right: 10px;
   &:hover {
-    border-color: #d9b6ff;
-    color: #d9b6ff;
+    border-color: ${(props) => props.theme.hoverTextColor};
+    color: ${(props) => props.theme.hoverTextColor};
   }
 `
 
 export const FilterPopup = styled.div`
   margin-top: 10px;
   min-width: 248px;
-  background: #313131;
+  background: ${(props) => props.theme.elementBackgroundColor};
   border-radius: 12px;
   padding: 34px;
   position: fixed;

@@ -18,11 +18,11 @@ const PlayerButton = styled.div`
   align-items: center;
 
   & svg {
-    fill: #d9d9d9;
+    fill: ${(props) => props.theme.basicPlayPauseColor};
   }
 
   &:hover svg {
-    fill: #696969;
+    fill: ${(props) => props.theme.hoverPlayPauseColor};
     cursor: pointer;
   }
 `
@@ -65,12 +65,12 @@ export const PlayerButtonRepeatSvg = styled.svg`
   width: 18px;
   height: 12px;
   fill: transparent;
-  stroke: #696969;
+  stroke: ${(props) => props.theme.basicIconColor};
 `
 
 export const PlayerButtonShuffleSvg = styled.svg`
   width: 19px;
   height: 12px;
   fill: transparent;
-  stroke: #696969;
+  stroke: ${(props) => props.theme.basicIconColor};
 `

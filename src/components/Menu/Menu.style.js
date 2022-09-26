@@ -11,7 +11,7 @@ export const MenuItem = styled.li`
 `
 
 export const MenuLink = styled(NavLink)`
-  color: #ffffff;
+  color: ${(props) => props.theme.basicTextColor};
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
