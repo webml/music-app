@@ -1,5 +1,21 @@
 import styled from 'styled-components'
 
+export const Centerblock = styled.div`
+  overflow: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 10px;
+    background-color: #4b4949;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #fff;
+  }
+`
+
 export const CenterblockSearch = styled.div`
   width: 100%;
   border-bottom: 1px solid ${(props) => props.theme.optionalColor};

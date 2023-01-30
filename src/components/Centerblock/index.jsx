@@ -6,7 +6,7 @@ import Playlist from '../Playlist'
 
 const Centerblock = (props) => {
   return (
-    <div className="centerblock">
+    <S.Centerblock>
       <S.CenterblockSearch>
         <Search />
       </S.CenterblockSearch>
@@ -22,7 +22,7 @@ const Centerblock = (props) => {
           <Playlist />
         </div>
       </S.CenterblockContent>
-    </div>
+    </S.Centerblock>
   )
 }
 

@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { Provider } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
 import * as S from './App.style'
 import { AppRoutes } from './routes'
 import { ThemeContext, themes } from './themes'
+import { store } from './store/store'
 
 function App() {
   const user = localStorage.getItem('token')
@@ -21,13 +23,15 @@ function App() {
   return (
     <ThemeProvider theme={currentTheme}>
       <ThemeContext.Provider value={{ theme: currentTheme, toggleTheme }}>
-        <div className="App">
-          <S.Wrapper>
-            <S.Container>
-              <AppRoutes user={user} />
-            </S.Container>
-          </S.Wrapper>
-        </div>
+        <Provider store={store}>
+          <div className="App">
+            <S.Wrapper>
+              <S.Container>
+                <AppRoutes user={user} />
+              </S.Container>
+            </S.Wrapper>
+          </div>
+        </Provider>
       </ThemeContext.Provider>
     </ThemeProvider>
   )
