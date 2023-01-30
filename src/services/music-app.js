@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const musicAppApi = createApi({
   reducerPath: 'musicAppApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://51.250.95.23:8000/',
+    baseUrl: 'https://painassasin.online/',
   }),
 
   endpoints: (builder) => ({

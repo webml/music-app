@@ -22,9 +22,14 @@ const Playlist = () => {
   }
 
   const getTrackTime = (second) => {
-    const min = Math.floor(second / 60)
-    const sec = second - min * 60
-    return `${min}:${sec}`
+    let min = Math.floor(second / 60)
+    let sec = second - min * 60
+
+    if (String(sec).length == 1) {
+      return `${min}:0${sec}`
+    } else {
+      return `${min}:${sec}`
+    }
   }
 
   return (
