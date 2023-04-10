@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.540d5337.css",
+    "main.js": "/static/js/main.79917460.js",
+    "static/media/Stratos-Regular.woff": "/static/media/Stratos-Regular.d20eb275042a513c8d55.woff",
+    "static/media/Stratos-Regular.woff2": "/static/media/Stratos-Regular.ec4882423f79afa46408.woff2",
+    "index.html": "/index.html",
+    "main.540d5337.css.map": "/static/css/main.540d5337.css.map",
+    "main.79917460.js.map": "/static/js/main.79917460.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.540d5337.css",
+    "static/js/main.79917460.js"
+  ]
+}
