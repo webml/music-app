@@ -6,7 +6,7 @@ const Track = (props) => {
       <S.TrackTitle>
         <S.TrackTitleImage>
           <S.TrackTitleSvg alt="music">
-            <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+            <use xlinkHref="/img/icon/sprite.svg#icon-note"></use>
           </S.TrackTitleSvg>
         </S.TrackTitleImage>
         <div className="track__title-text">
@@ -28,7 +28,7 @@ const Track = (props) => {
       </S.TrackAlbum>
       <div className="track__time">
         <S.TrackTimeSvg alt="time">
-          <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+          <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
         </S.TrackTimeSvg>
         <S.TrackTimeSpan>{props.time}</S.TrackTimeSpan>
       </div>

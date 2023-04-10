@@ -16,3 +16,7 @@ export const MenuLink = styled(NavLink)`
   font-size: 16px;
   line-height: 24px;
 `
+export const MenuSVGChoseTheme = styled.svg`
+  height: 40px;
+  width: 40px;
+`

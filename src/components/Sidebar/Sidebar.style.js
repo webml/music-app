@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-export const SidebarBlock = styled.div`
+export const Sidebar = styled.div`
   height: 100%;
-  padding: 240px 0 0 0;
+  padding: 40px 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

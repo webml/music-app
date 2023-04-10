@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
 export const SidebarItem = styled.div`
-  width: 250px;
-  height: 150px;
+  max-width: 250px;
+  max-height: 150px;
 
   &:not(:last-child) {
     margin-bottom: 30px;

@@ -50,7 +50,7 @@ export const TrackPlaySvg = styled.svg`
 `
 export const TrackPlayAuthor = styled.div`
   grid-area: author;
-  min-width: 49px;
+  width: 250px;
 `
 
 export const TrackPlayAuthorLink = styled.a`

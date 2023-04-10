@@ -1,6 +1,8 @@
 import * as S from './Navbar.style'
 import Logo from '../Logo'
 import Menu from '../Menu'
+import Sidebar from '../Sidebar'
+import { PLAYLISTS } from '../../constants'
 import { useState } from 'react'
 
 const Navbar = () => {
@@ -9,7 +11,7 @@ const Navbar = () => {
   const handleClick = () => setVisible(!visible)
 
   return (
-    <nav className="nav">
+    <S.Nav>
       <S.NavLogo>
         <Logo />
       </S.NavLogo>
@@ -19,7 +21,9 @@ const Navbar = () => {
         <S.BurgerLine />
       </S.NavBurger>
       {visible && <Menu />}
-    </nav>
+
+      <Sidebar playlists={PLAYLISTS} />
+    </S.Nav>
   )
 }
 

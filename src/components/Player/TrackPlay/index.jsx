@@ -1,22 +1,24 @@
+import { useTrackContext } from '../../../player'
 import * as S from './TrackPlay.style'
 
-const TrackPlay = (props) => {
+const TrackPlay = () => {
+  const { track } = useTrackContext()
   return (
     <S.TrackPlay>
       <S.TrackPlayContain>
         <S.TrackPlayImage>
           <S.TrackPlaySvg alt="music">
-            <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+            <use xlinkHref="/img/icon/sprite.svg#icon-note"></use>
           </S.TrackPlaySvg>
         </S.TrackPlayImage>
         <S.TrackPlayAuthor>
           <S.TrackPlayAuthorLink href="http://">
-            {props.name}
+            {track.name}
           </S.TrackPlayAuthorLink>
         </S.TrackPlayAuthor>
         <S.TrackPlayAlbum>
           <S.TrackPlayAlbumLink href="http://">
-            {props.author}
+            {track.author}
           </S.TrackPlayAlbumLink>
         </S.TrackPlayAlbum>
       </S.TrackPlayContain>
@@ -24,12 +26,12 @@ const TrackPlay = (props) => {
       <S.TrackPlayLikeDislike>
         <S.BtnIcon>
           <S.TrackPlayLikeSvg alt="like">
-            <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+            <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
           </S.TrackPlayLikeSvg>
         </S.BtnIcon>
         <S.BtnIcon>
           <S.TrackPlayDislikeSvg alt="dislike">
-            <use xlinkHref="img/icon/sprite.svg#icon-dislike"></use>
+            <use xlinkHref="/img/icon/sprite.svg#icon-dislike"></use>
           </S.TrackPlayDislikeSvg>
         </S.BtnIcon>
       </S.TrackPlayLikeDislike>

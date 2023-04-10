@@ -1,26 +1,17 @@
 import * as S from './Centerblok.style'
 import Search from '../Search'
-import Filter from '../Filter'
-import PlaylistTitle from '../PlaylistTitle'
 import Playlist from '../Playlist'
 
-const Centerblock = (props) => {
+const Centerblock = () => {
   return (
     <S.Centerblock>
       <S.CenterblockSearch>
         <Search />
       </S.CenterblockSearch>
-      <S.CenterblockH2>{props.name}</S.CenterblockH2>
-      <div className="centerblock__filter">
-        <Filter />
-      </div>
       <S.CenterblockContent>
-        <div className="content__title">
-          <PlaylistTitle />
-        </div>
-        <div className="content__playlist">
+        <S.ContentPlaylist>
           <Playlist />
-        </div>
+        </S.ContentPlaylist>
       </S.CenterblockContent>
     </S.Centerblock>
   )

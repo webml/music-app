@@ -1,18 +1,11 @@
 import styled from 'styled-components'
 
-export const SearchSvg = styled.svg`
-  width: 17px;
-  height: 17px;
-  margin-right: 5px;
-  stroke: ${(props) => props.theme.activeIconColor};
-  fill: transparent;
-`
-
 export const SearchInput = styled.input`
-  flex-grow: 100;
+  width: 100%;
+
   background-color: transparent;
   border: none;
-  padding: 13px 10px 14px;
+  padding: 13px 10px 10px 40px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -26,5 +19,24 @@ export const SearchInput = styled.input`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+  }
+`
+export const Search = styled.div`
+  width: 100%;
+  border-bottom: 1px solid ${(props) => props.theme.optionalColor};
+  margin-bottom: 51px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    margin-left: 4px;
+    width: 17px;
+    height: 17px;
+    stroke: ${(props) => props.theme.activeIconColor};
+    background: url('/img/icon/search.svg#icon-search');
   }
 `
