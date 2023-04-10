@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const PlaylistTitle = styled.div`
   display: flex;
+  max-width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -35,4 +36,5 @@ export const PlaylistCol03 = styled(PlaylistTitleCol)`
 export const PlaylistCol04 = styled(PlaylistTitleCol)`
   width: 60px;
   text-align: end;
+  padding-right: 16px;
 `

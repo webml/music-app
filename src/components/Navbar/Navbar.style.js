@@ -1,11 +1,19 @@
 import styled from 'styled-components'
 
+export const Nav = styled.nav`
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-right: 36px;
+`
+
 export const NavLogo = styled.div`
-  width: 113.33px;
-  height: 43px;
+  max-width: 113.33px;
+  max-height: 43px;
   padding: 13px 0 13px 0;
   background-color: transparent;
-  margin-bottom: 20px;
 `
 
 export const NavBurger = styled.div`

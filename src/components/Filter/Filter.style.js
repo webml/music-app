@@ -91,7 +91,7 @@ export const PopupYear = styled.div`
       height: 100%;
       position: absolute;
       left: 0;
-      background: url('img/icon/radio_disable.png') 0 0 no-repeat;
+      background: url('/img/icon/radio_disable.png') 0 0 no-repeat;
 
       &:hover:before {
         filter: brightness(80%);
@@ -99,7 +99,7 @@ export const PopupYear = styled.div`
     }
 
     & input[type='radio']:checked + label:before {
-      background: url('img/icon/radio_active.png') 0 0 no-repeat;
+      background: url('/img/icon/radio_active.png') 0 0 no-repeat;
     }
   }
 `

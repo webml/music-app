@@ -1,10 +1,10 @@
-import * as S from './SidebarPerson.style'
+import * as S from './Person.style'
 
 const SidebarPerson = (props) => {
   return (
     <S.SidebarPersonal>
-      <S.SidebarPersonalName>{props.name}</S.SidebarPersonalName>
       <S.SidebarAvatar></S.SidebarAvatar>
+      <S.SidebarPersonalName>{props.name}</S.SidebarPersonalName>
     </S.SidebarPersonal>
   )
 }

@@ -1,11 +1,13 @@
 import { Routes, Route } from 'react-router-dom'
+
 import { Login } from './pages/Login'
-import { MainPage } from './pages/MainPage'
 import { NotFound } from './pages/NotFound'
-import PlaylistPage from './pages/PlaylistPage'
 import { Registration } from './pages/Registration'
-import UserTracks from './pages/UserTracks'
+
 import { ProtectedRoute } from './components/ProtectedRoute'
+import Centerblock from './components/Centerblock'
+
+import { Page } from './pages/Page'
 
 export const AppRoutes = ({ user }) => {
   return (
@@ -15,9 +17,11 @@ export const AppRoutes = ({ user }) => {
       <Route path="/registration" element={<Registration />} />
 
       <Route element={<ProtectedRoute isAllowed={Boolean(user)} />}>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/userTracks" element={<UserTracks />} />
-        <Route path="/playlist/:id" element={<PlaylistPage />} />
+        <Route element={<Page />}>
+          <Route path="/" element={<Centerblock />} />
+          <Route path="/userTracks" element={<Centerblock />} />
+          <Route path="/playlist/:id" element={<Centerblock />} />
+        </Route>
       </Route>
     </Routes>
   )

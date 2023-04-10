@@ -1,40 +1,15 @@
 import styled from 'styled-components'
 
 export const Centerblock = styled.div`
-  overflow: hidden;
-  overflow-y: auto;
-
-  &::-webkit-scrollbar {
-    width: 4px;
-    border-radius: 10px;
-    background-color: #4b4949;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #fff;
-  }
+  display: block;
+  margin: auto;
+  max-width: 1100px;
 `
 
-export const CenterblockSearch = styled.div`
-  width: 100%;
-  border-bottom: 1px solid ${(props) => props.theme.optionalColor};
-  margin-bottom: 51px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`
-
-export const CenterblockH2 = styled.h2`
-  font-style: normal;
-  font-weight: 400;
-  font-size: 64px;
-  line-height: 72px;
-  letter-spacing: -0.8px;
-  margin-bottom: 45px;
-`
+export const CenterblockSearch = styled.div``
 
 export const CenterblockContent = styled.div`
   display: flex;
   flex-direction: column;
 `
+export const ContentPlaylist = styled.div``

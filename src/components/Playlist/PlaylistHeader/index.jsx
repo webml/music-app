@@ -1,4 +1,4 @@
-import * as S from './PlaylistTitle.style'
+import * as S from './PlaylistHeader.style'
 
 const PlaylistTitle = () => {
   return (
@@ -8,7 +8,7 @@ const PlaylistTitle = () => {
       <S.PlaylistCol03>АЛЬБОМ</S.PlaylistCol03>
       <S.PlaylistCol04>
         <S.PlaylistTitleSvg alt="time">
-          <use xlinkHref="img/icon/sprite.svg#icon-watch"></use>
+          <use xlinkHref="/img/icon/sprite.svg#icon-watch"></use>
         </S.PlaylistTitleSvg>
       </S.PlaylistCol04>
     </S.PlaylistTitle>

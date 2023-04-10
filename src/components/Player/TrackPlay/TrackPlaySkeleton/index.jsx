@@ -1,4 +1,4 @@
-import * as S from '../TrackPlay/TrackPlay.style'
+import * as S from '../TrackPlay.style'
 
 const TrackPlay = () => {
   return (
@@ -21,12 +21,12 @@ const TrackPlay = () => {
       <S.TrackPlayLikeDislike>
         <S.BtnIcon>
           <S.TrackPlayLikeSvg alt="like">
-            <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+            <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
           </S.TrackPlayLikeSvg>
         </S.BtnIcon>
         <S.BtnIcon>
           <S.TrackPlayDislikeSvg alt="dislike">
-            <use xlinkHref="img/icon/sprite.svg#icon-dislike"></use>
+            <use xlinkHref="/img/icon/sprite.svg#icon-dislike"></use>
           </S.TrackPlayDislikeSvg>
         </S.BtnIcon>
       </S.TrackPlayLikeDislike>

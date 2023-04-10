@@ -4,8 +4,6 @@ export const SidebarPersonal = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-  padding: 12px 0 15px 0;
 `
 
 export const SidebarPersonalName = styled.p`
@@ -14,7 +12,7 @@ export const SidebarPersonalName = styled.p`
   font-size: 16px;
   line-height: 24px;
   color: ${(props) => props.theme.basicTextColor};
-  margin-right: 16px;
+  margin-left: 16px;
 `
 
 export const SidebarAvatar = styled.div`

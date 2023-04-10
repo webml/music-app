@@ -1,5 +1,6 @@
 import { themes, useThemeContext } from '../../themes'
 import * as S from './Menu.style'
+import Person from '../Person'
 
 const Menu = () => {
   const { theme, toggleTheme } = useThemeContext()
@@ -13,6 +14,9 @@ const Menu = () => {
     <div className="menu">
       <S.MenuList>
         <S.MenuItem>
+          <Person name="Sergey.Ivanov" />
+        </S.MenuItem>
+        <S.MenuItem>
           <S.MenuLink to="/">Главное</S.MenuLink>
         </S.MenuItem>
         <S.MenuItem>
@@ -22,9 +26,10 @@ const Menu = () => {
           <S.MenuLink to="/login">Войти</S.MenuLink>
         </S.MenuItem>
         <div onClick={toggleTheme}>
-          <svg alt="prev">
+          <S.MenuSVGChoseTheme alt="prev">
+            {' '}
             <use xlinkHref={toggleThemeImg}></use>
-          </svg>
+          </S.MenuSVGChoseTheme>
         </div>
       </S.MenuList>
     </div>
